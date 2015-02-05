@@ -86,6 +86,11 @@ public class MainActivity extends ActionBarActivity {
 
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             wireUpViews(rootView);
+            prepareButtonSave(rootView);
+            return rootView;
+        }
+
+        private void prepareButtonSave(View rootView) {
             Button mButtonSave = (Button) rootView.findViewById(R.id.button_save);
             mButtonSave.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -95,7 +100,6 @@ public class MainActivity extends ActionBarActivity {
 
                 }
             });
-            return rootView;
         }
 
         private void saveDocument(Document document) {
